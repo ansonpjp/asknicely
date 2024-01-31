@@ -20,3 +20,6 @@ EOF
 COPY --from=gloursdocker/docker / /
 
 CMD ["apache2-foreground"]
+
+# Install MySQL extension
+RUN docker-php-ext-install mysqli pdo pdo_mysql
